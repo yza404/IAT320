@@ -12,16 +12,16 @@
 
 #include <Adafruit_CircuitPlayground.h>
 
-int pads[8] = {3, 2, 0, 1, 12, 6, 9, 10};
+int pads[8] = {3,2,0,1,12,6,9,10};
 int input[8] = {-1,-1,-1,-1,-1,-1,-1,-1};
 int checkAmt = 0;
 
 bool correct =false; 
 
-float threshhold = 600;
+float threshhold = 200;
 
 //claim note of pitches for each touch pad
-float pitches[8] = {262, 294, 330, 349, 392, 440, 494, 523};
+float pitches[7] = {262, 294, 330, 349, 392, 440, 494};
 
 void setup() {
   // Initialize serial.
@@ -48,7 +48,7 @@ void loop() {
       
     for (int m=0; m<10; m++) 
       {
-      CircuitPlayground.setPixelColor(m, 0, 255, 255);
+      CircuitPlayground.setPixelColor(m, 0, 255, 0);
       }
       delay(10); // Update rate.
   }
